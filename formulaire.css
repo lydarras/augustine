@@ -1,0 +1,11 @@
+.ErreurForm{
+	float: left;
+	position: absolute;
+	visibility: hidden;
+	
+	width: 93.1%;
+
+	background-color: #B92126;
+	border-color: #CC3333;
+	color: #303030;
+}

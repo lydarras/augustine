@@ -1,0 +1,4 @@
+AuthName "Partie Administrateur"
+AuthType Basic
+AuthUserFile "/var/www/LDV/siteAugustine_vBeta_PHP/fr/admin/.htpasswd"
+Require valid-user

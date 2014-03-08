@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0" />
+		<link href="rsc/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="mainStyle.css" />
+		<link rel="stylesheet" href="formulaire.css" />
+		<title>Site du projet Augustine</title>
+		<link rel="icon" type="image/png" href="rsc/img/Accueil_footer.png">
+	</head>
+
+	<body>
+		<!-- Includes for script -->
+		<script src="rsc/jquery.js"></script>
+        <script src="rsc/bootstrap/js/bootstrap.js"></script>
+		<script src="verif.js"></script>   
+				
+		<header class="navbar navbar-default navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-abr"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="rsc/img/Accueil.png" height="20" width="65" /></a>
+				</div>
+
+				<nav class="collapse navbar-collapse" id="bs-exambple-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="presentation.html">Pr&eacutesentation</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historique<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="historique.html#2011"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2011</a></li>
+								<li><a href="historique.html#2012"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2012</a></li>
+								<li><a href="historique.html#2013"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2013</a></li>
+								<li><a href="historique.html#presse"><span class="glyphicon glyphicon-share-alt"></span>Presse</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="galerie.html">Galerie</a></li>
+						<li><a href="sponsors.html">Sponsors</a></li>
+						<li class="active" ><a href="support.html">Support</a></li>
+					</ul>
+
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">	
+							<input type="text" class="form-control" placeholder="Rechercher">
+						</div>	
+							<button type="submit"><a href="#"><span class="glyphicon glyphicon-search" ></span></a></button>
+					</form>
+				</nav>
+			</div>
+		</header>
+		
+		<!-- 
+			navBar's end 
+			page's beginning
+		-->
+		<div class="MainDiv">
+			<div class="bs-header">
+				<div class="container">
+					<h1> Nous supporter </h1>
+				</div>
+			</div>
+		
+			<div class="bs-docs-section" id="contact">
+				<div class="page-header">
+					<h2>Nous contacter</h2>
+				</div>
+				<div class="container">
+					<p>Si vous souhaitez d'autres renseignements ou bien nous faire parvenir vos avis, vous pouvez nous joindre en cliquant sur le logo suivant:
+				
+						<br />
+						<br />
+						<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  							Message
+						</button>
+
+						<!-- Modal -->
+						<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+						    	<div class="modal-content">
+						      		<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+										<h4 class="modal-title" id="myModalLabel">Envoi d'un message</h4>
+						      		</div>
+						      		<div class="modal-body">	
+										<form action="email.php" method="post" onsubmit="return verifForm(this)" >
+						      				<div class="alert alert-danger alert-dismissable ErreurForm" id="popup_erreur" >
+                                            	<a class="close" onclick="closeError()" >&times;</a>
+                                            	<p>
+                       		              	        <strong>Erreur !</strong>
+                       		                        </br>
+                       		                        Veuillez renseignez tous les champs.
+                                 		      	</p>
+                          			        </div>
+											<table>
+							      				<tr>
+							      					<td>
+														<select class="form-control" name="civilite" value="">
+															<option>Mr</option>
+															<option>Mme</option>
+															<option>Mlle</option>
+															<option>Autre</option>
+														</select>
+													</td>
+									      			<td><input class="form-control" type="text" placeholder="Nom" name="nom" value="" id="nom" onblur="verifNom(this)" ></td>
+									      			<td><input class="form-control" type="text" placeholder="Prenom" name="prenom" value="" id="prenom" onblur="verifPrenom(this)" ></td>
+												</tr>	
+											</table>
+											<br />
+											<input class="form-control" type="text" placeholder="Objet" name="objet" value="" id="objet" onblur="verifObjet(this)" />
+									   		<br />
+									   		<textarea style="resize:none;" class="form-control" rows="5" cols="2" placeholder="Votre message" name="message" id="message" onblur="verifMessage(this)"></textarea>			
+								   		    <div class="modal-footer">
+												<button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+												<input type="submit" class="btn btn-primary" name="Envoyer" onsubmit="verif(this.form)" />
+											</div>
+										</form>
+						      		</div>
+						    	</div><!-- /.modal-content -->
+						  	</div><!-- /.modal-dialog -->
+						</div><!-- /.modal -->
+						
+					</p>
+				</div>
+			</div>	
+			<br />
+
+			<div class="bs-docs-section">
+				<div class="page-header">
+					<h2> Faire un don </h2>
+				</div>
+				
+				<div class="container">		
+					<p>	Si vous trouvez ce site int&eacuteressant, pensez aux concepteurs et aux futurs projets en faisant un petit don, merci d'avance.
+				
+						<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+							<br />
+							<input type="hidden" name="cmd" value="_s-xclick">
+							<input type="hidden" name="hosted_button_id" value="ELXTWNNPXTKX8">
+							<input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - la solution de paiement en ligne la plus simple et la plus sécurisée !">
+							<img alt="" border="0" src="https://www.paypalobjects.com/fr_FR/i/scr/pixel.gif" width="1" height="1">
+							
+						</form>						
+					</p>
+				</div>
+			</div>
+		</div> <!-- MainDiv end -->
+		
+		<!-- 
+			MainDiv's end 
+			footer's beginning
+		-->
+		
+		<footer>
+			<p>
+				<span class="AlignLeft">
+					<a href="index.html"><img src="rsc/img/Accueil.png" alt="Logo" class="FooterLogo" />Accueil du site</a>
+				</span>
+				<span class="AlignRight">
+					<a href="http://facebook.com/projetaugustinemelun" ><img src="rsc/img/Facebook.png" alt="logo Facebook" />Facebook</a>
+					<a href="http://twitter.com/ProjetAugustine" ><img src="rsc/img/Twitter.png" alt="logo Twitter" />Twitter</a>
+					<a href="support.html#mail" ><img src="rsc/img/Mail.png" alt="logo Mail" />Nous &eacutecrire</a>
+				</span>
+			</p>
+			<div class="FooterEnd"></div>
+		</footer>
+	</body>
+</html>

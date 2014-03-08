@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" name="viewport" content= "width=device-width, initial-scale=1.0" />
+		<link href="rsc/bootstrap/css/bootstrap.css" rel="stylesheet" />
+		
+		<link rel="stylesheet" href="mainStyle.css" />
+		<title>Site du projet Augustine</title>
+		<link rel="icon" type="image/png" href="rsc/img/Accueil_footer.png">
+	</head>
+
+	<body>
+		<!-- Includes for script -->
+	<script src="rsc/jquery.js"></script>
+        <script src="rsc/bootstrap/js/bootstrap.js"></script>
+	<script src="rsc/son.js"></script>   
+				
+		<header class="navbar navbar-default navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".bs-navbar-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-abr"></span>
+					</button>
+					<a class="navbar-brand" href="index.html"><img src="rsc/img/Accueil.png" height="20" width="65" /></a>
+				</div>
+
+				<nav class="collapse navbar-collapse" id="bs-exambple-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="presentation.html">Pr&eacutesentation</a>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Historique<b class="caret"></b></a>
+							<ul class="dropdown-menu">
+								<li><a href="historique.html#2011"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2011</a></li>
+								<li><a href="historique.html#2012"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2012</a></li>
+								<li><a href="historique.html#2013"><span class="glyphicon glyphicon-share-alt"></span>Ann&eacutee 2013</a></li>
+								<li><a href="historique.html#presse"><span class="glyphicon glyphicon-share-alt"></span>Presse</a></li>
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav">
+						<li><a href="galerie.html">Galerie</a></li>
+						<li><a href="sponsors.html">Sponsors</a></li>
+						<li><a href="support.html">Support</a></li>
+					</ul>
+
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">	
+							<input type="text" class="form-control" placeholder="Rechercher">
+						</div>	
+							<button type="submit"><a href="#"><span class="glyphicon glyphicon-search" ></span></a></button>
+					</form>
+				</nav>
+			</div>
+		</header>
+		
+		<!-- 
+			navBar's end 
+			page's beginning
+		-->
+		
+		<div class="MainDiv">
+			<div class="bs-header">
+				<div class="container">
+					<p>
+						<h1>Projet Augustine</h1>
+						<h4>Bienvenue sur le site officiel du projet Augustine !</h4>
+					</p>
+				</div>
+			</div>
+		
+			<div id="CAROUSEL" class="container bs-docs-container">
+				<div class="row">
+					<div class="col-md-9" role="main">
+						<div class="bs-docs-section">
+							<div id="myCarousel" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+									<li data-target="#myCarousel" data-slide-to="1"></li>
+									<li data-target="#myCarousel" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="item active">
+										<img alt="" src="rsc/img/voiture_1.jpg">
+									</div>
+
+									<div class="item">
+										<img alt="" src="rsc/img/voiture_2.jpg">
+									</div>
+									<div class="item">
+										<img alt="" src="rsc/img/voiture_3.jpg">
+									</div>
+								</div> <!-- end of <div class="carousel-inner"> -->
+								<a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+								<a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+						
+			<div class="bs-docs-section">
+				<div class="page-header">
+					<h1>Le projet Augustine c'est quoi ?<h1>
+				</div>
+				<div class="container">
+					<p>
+						Ce projet consistait, via un partenariat entre diff&eacuterents &eacutetablissements scolaires, <!--space-->
+						&agrave cr&eacuteer de toutes pi&egraveces un v&eacutehicule enti&egraverement &eacutecologique <!--space-->
+						permettant par la suite, de participer au challenge &Eacuteduc&Eacuteco.
+						<br />
+						Pour de plus ample informations, veuillez consulter la page de <a href="presentation.html">pr&eacutesentation</a>.
+						<br />
+						Vous trouverez &eacutegalement un <a href="historique.html">historique</a> pour revivre les ann&eacutees <!--space-->
+						pr&eacutec&eacutedentes ainsi qu'une liste de de nos <a href="#">sponsors</a>.
+					</p>
+				</div>
+			</div>
+						
+			<div class="bs-docs-section">
+				<div id="contactUs">
+					<div class="page-header">
+						<h1>Nous Suivre</h1>
+					</div>
+					<ul>
+						<audio id="son" preload="auto">
+ 							<source src='rsc/son/pop.mp3' type='audio/mp3'>
+         						<source src='rsc/son/pop.ogg' type='audio/ogg'>
+         					</audio>
+
+						<li><a href="http://facebook.com/projetaugustinemelun" target="_blank"><div class="AnimatedLogo"><img src="rsc/img/Facebook.png" alt="logo Facebook" onmouseover="playpause()" onmouseout="playpause()"/></div></a></li>
+						<li><a href="http://twitter.com/ProjetAugustine" target="_blank"><div class="AnimatedLogo"><img src="rsc/img/Twitter.png" alt="logo Twitter" onmouseover="playpause()" onmouseout="playpause()"/></div></a></li>							
+					</ul>
+					<ul>
+						<li id="ColoredLine"></li>
+					</ul>
+				</div>
+			</div>
+		</div> <!-- MainDiv's end -->
+		
+		<!-- 
+			MainDiv's end 
+			footer's beginning
+		-->
+		
+		<footer>
+			<p>
+				<span class="AlignLeft">
+					<a href="index.html"><img src="rsc/img/Accueil_footer.png" alt="Logo" class="FooterLogo" />Accueil du site</a>
+				</span>
+				<span class="AlignRight">
+					<a href="http://facebook.com/projetaugustinemelun" target="_blank"><img src="rsc/img/Facebook.png" alt="logo Facebook" />Facebook</a>
+					<a href="http://twitter.com/ProjetAugustine" target="_blank"><img src="rsc/img/Twitter.png" alt="logo Twitter" />Twitter</a>
+					<a href="support.html#mail" ><img src="rsc/img/Mail.png" alt="logo Mail" />Nous &eacutecrire</a>
+				</span>
+			</p>
+			<div class="FooterEnd"></div>
+		</footer>
+		
+	</body>
+</html>
