@@ -36,6 +36,7 @@
 
     if(empty($_POST['message'])){
 	    $ok = FALSE;
+        $msg="";
         displayMessage("Erreur de Message", "Votre message n'a pas été renseigné");
 	}
 
